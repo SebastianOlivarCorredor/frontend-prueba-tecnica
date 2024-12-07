@@ -36,7 +36,7 @@ function Formulario() {
     const nuevoNombre = prompt("Nuevo nombre:", elementos[index].nombre);
     if (nuevoNombre) {
       try {
-        await axios.put(`https://backend-prueba-tecnica-t5iu.onrender.com/${elementos[index].nombre}`, { nombre: nuevoNombre });
+        await axios.put(`https://backend-prueba-tecnica-t5iu.onrender.com/elementos/${elementos[index].nombre}`, { nombre: nuevoNombre });
         const nuevosElementos = [...elementos];
         nuevosElementos[index].nombre = nuevoNombre;
         setElementos(nuevosElementos);
@@ -49,7 +49,7 @@ function Formulario() {
 
   const eliminarElemento = async (index) => {
     try {
-      await axios.delete(`https://backend-prueba-tecnica-t5iu.onrender.com/${elementos[index].nombre}`);
+      await axios.delete(`https://backend-prueba-tecnica-t5iu.onrender.com/elementos/${elementos[index].nombre}`);
       const nuevosElementos = elementos.filter((_, i) => i !== index);
       setElementos(nuevosElementos);
     } catch (error) {
@@ -60,7 +60,7 @@ function Formulario() {
   useEffect(() => {
     const obtenerElementos = async () => {
       try {
-        const response = await axios.get('https://backend-prueba-tecnica-t5iu.onrender.com');
+        const response = await axios.get('https://backend-prueba-tecnica-t5iu.onrender.com/elementos');
         setElementos(response.data);
       } catch (error) {
         console.error('Error al obtener elementos:', error);
@@ -72,7 +72,7 @@ function Formulario() {
 
   const buscarElemento = async () => {
     try {
-      const response = await axios.get(`https://backend-prueba-tecnica-t5iu.onrender.com/${busqueda}`);
+      const response = await axios.get(`https://backend-prueba-tecnica-t5iu.onrender.com/elementos/${busqueda}`);
       setElementoEncontrado(response.data);
     } catch (error) {
       console.error('Error al buscar elemento:', error);
