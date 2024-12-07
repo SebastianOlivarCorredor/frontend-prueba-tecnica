@@ -12,7 +12,7 @@ function Formulario() {
 
   const agregarElemento = async () => {
     try {
-      const response = await axios.post('https://backend-prueba-tecnica-t5iu.onrender.com', { nombre: nombre });
+      const response = await axios.post('https://backend-prueba-tecnica-t5iu.onrender.com/elementos', { nombre: nombre });
       const nuevoElemento = response.data;
       setElementos([...elementos, nuevoElemento]);
       setNombre('');
