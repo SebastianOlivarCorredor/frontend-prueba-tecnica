@@ -1,0 +1,25 @@
+
+body {
+    background-color: #f7f3e8; /* Color de fondo blanco hueso oscuro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente */
+  }
+  
+  h1 {
+    font-size: 3rem; /* Tamaño del título */
+    color: #333; /* Color del título */
+  }
+  
+  h2 {
+    font-size: 2rem; /* Tamaño del título "Elementos" */
+    color: #333; /* Color del título "Elementos" */
+  }
+  
+  .table {
+    background-color: #fff; /* Fondo blanco para la tabla */
+    border-collapse: collapse; /* Colapsar bordes de la tabla */
+  }
+  
+  .table th, .table td {
+    border: 1px solid #dee2e6; /* Bordes de las celdas */
+    padding: 0.75rem; /* Espaciado interno de las celdas */
+  }
