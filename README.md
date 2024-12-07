@@ -88,4 +88,3 @@ prueba-tecnica-juan/
 
 * Este proyecto utiliza React Bootstrap para los estilos.
 * El backend se encuentra en otro repositorio: `https://github.com/SebastianOlivarCorredor/backend-prueba-tecnica.git`
-```
